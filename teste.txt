@@ -1,0 +1,6 @@
+foo:x:23:25:cecerhcp awe:home:shell
+bra:x:23:25:como assim:home:shell
+foobra:x:23:25:como assim faz:home:shell
+cesar:x:33:25:teste de regi:home:shell
+cano:x:33:25:teste regi:home:shell
+oliveira:x:25:25:como assim:home:shell
