@@ -8,25 +8,31 @@ arquivo = sys.stdin
 output = ''
 dnsStarted = False
 output = output + arquivo.readline()
-match = re.search('\S+\.(\S+\.\S+)\.', arquivo.readline())
+line = arquivo.readline()
+match = re.search('\S+\.(\S+\.\S+)\.', line)
 if match :
 	domain = match.group(1)
+	output = output + line
 else : 
-	print('Erro\n')
+	print('Erro - Arquivo de entrada com formato incorreto')
+	sys.exit(0)
 
 line = arquivo.readline()
 while (line != ''):
 	match = re.search('(\S+)\s+A\s+\d+\.\d+\.\d+.\.(\d+)', line)
 	if match :
-		output = output + match.group(2) + '  PTR  ' +  match.group(1) + '.' + domain + '\n'
+		output = output + match.group(2) + '  PTR  ' +  match.group(1) + '.' + domain + '.\n'
 		dnsStarted = True
 	else :
 		if dnsStarted is False:	
 			output = output + line
 		else : 
-			print('Erro!\n')
+			print('Erro - Arquivo de entrada com formato incorreto')
+			sys.exit(0)
 	line = arquivo.readline()
 
+
 print(output)
+
 
       
