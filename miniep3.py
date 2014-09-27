@@ -1,5 +1,5 @@
-# Cesar Cano de Oliveira e João Henrique Luciano
-# NUSP: 8536169 e NUSP: ????
+# Cesar Cano de Oliveira - NUSP: 8536169 
+# João Henrique Luciano - NUSP: 8535957
 # obs: para executar eu usei python3.3
 import sys
 import re
